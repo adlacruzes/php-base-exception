@@ -1,0 +1,51 @@
+{
+    "name": "adlacruzes/php-base-exception",
+    "type": "library",
+    "description": "PHP base exception with default message and custom value",
+    "keywords": [
+        "exception",
+        "custom",
+        "message"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrés De la Cruz Escrig"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Adlacruzes\\Exceptions\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Adlacruzes\\Exceptions\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "composer-require-checker": "tools/composer-require-checker",
+        "phpcs": "tools/phpcs --report=source -s",
+        "phpcbf": "tools/phpcbf",
+        "php-cs-fixer" : "tools/php-cs-fixer fix --dry-run --diff --verbose --diff-format=udiff",
+        "phpstan": "tools/phpstan analyse src tests --no-progress --memory-limit=1024M --level=max",
+        "phpunit": "vendor/bin/phpunit",
+        "ci": [
+            "@composer-require-checker",
+            "@phpcs",
+            "@php-cs-fixer",
+            "@phpstan",
+            "@phpunit"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
