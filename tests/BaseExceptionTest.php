@@ -16,6 +16,13 @@ class BaseExceptionTest extends TestCase
         throw new SomethingNotFoundException();
     }
 
+    public function testEmptyMessageWithConsecutiveCapitalLetters()
+    {
+        $this->expectExceptionMessage('Consecutive capital letters');
+
+        throw new ConsecutiveCAPITALLettersException();
+    }
+
     public function testEmptyMessageWithValue()
     {
         $this->expectExceptionMessage('Something not found: 404');

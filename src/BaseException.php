@@ -28,14 +28,15 @@ abstract class BaseException extends \Exception
 
     private function generateMessage(string $message): string
     {
-        $generated = str_replace('Exception', '', $message);
-        $generated = preg_replace_callback(
-            '/[A-Z]/',
-            function ($match) {
-                return ' ' . strtolower($match[0]);
-            },
-            $generated
+        $words = preg_split(
+            '/(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/',
+            str_replace('Exception', '', $message)
         );
+
+        $generated = '';
+        foreach ($words as $word) {
+            $generated .= ' ' . strtolower($word);
+        }
 
         return ucfirst(trim($generated));
     }
