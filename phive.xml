@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<phive xmlns="https://phar.io/phive">
-  <phar name="phpstan" version="^0.9.2" installed="0.9.2" location="./tools/phpstan" copy="true"/>
-  <phar name="phpcs" version="^3.4.0" installed="3.4.0" location="./tools/phpcs" copy="true"/>
-  <phar name="phpcbf" version="^3.4.0" installed="3.4.0" location="./tools/phpcbf" copy="true"/>
-  <phar name="php-cs-fixer" version="^2.14.0" installed="2.14.0" location="./tools/php-cs-fixer" copy="true"/>
-  <phar name="composer-require-checker" version="^0.1.6" installed="0.1.6" location="./tools/composer-require-checker" copy="true"/>
-</phive>

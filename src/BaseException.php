@@ -34,8 +34,11 @@ abstract class BaseException extends \Exception
         );
 
         $generated = '';
-        foreach ($words as $word) {
-            $generated .= ' ' . strtolower($word);
+
+        if (is_iterable($words)) {
+            foreach ($words as $word) {
+                $generated .= ' ' . strtolower($word);
+            }
         }
 
         return ucfirst(trim($generated));

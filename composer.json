@@ -14,10 +14,11 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6"
+        "adlacruzes/php-ci-tools": "dev-master",
+        "phpunit/phpunit": "^8"
     },
     "autoload": {
         "psr-4": {
@@ -30,17 +31,19 @@
         }
     },
     "scripts": {
-        "composer-require-checker": "tools/composer-require-checker",
-        "phpcs": "tools/phpcs --report=source -s",
-        "phpcbf": "tools/phpcbf",
-        "php-cs-fixer" : "tools/php-cs-fixer fix --dry-run --diff --verbose --diff-format=udiff",
-        "phpstan": "tools/phpstan analyse src tests --no-progress --memory-limit=1024M --level=max",
+        "composer-require-checker": "vendor/bin/ci-tools composer-require-checker",
+        "phpcs": "vendor/bin/ci-tools phpcs --report=source -s",
+        "phpcbf": "vendor/bin/ci-tools phpcbf",
+        "php-cs-fixer" : "vendor/bin/ci-tools php-cs-fixer fix --dry-run --diff --verbose --diff-format=udiff --ansi",
+        "phpstan": "vendor/bin/ci-tools phpstan analyse src tests --no-progress --memory-limit=1024M --level=max --ansi",
+        "security-checker": "vendor/bin/ci-tools security-checker security:check",
         "phpunit": "vendor/bin/phpunit",
         "ci": [
             "@composer-require-checker",
             "@phpcs",
             "@php-cs-fixer",
             "@phpstan",
+            "@security-checker",
             "@phpunit"
         ]
     },
