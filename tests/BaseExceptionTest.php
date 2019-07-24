@@ -46,6 +46,52 @@ class BaseExceptionTest extends TestCase
         );
     }
 
+    public function testMessageWithZeroAsString()
+    {
+        $expected = 'Something not found: 0';
+
+        try {
+            throw new SomethingNotFoundException('0');
+        } catch (SomethingNotFoundException $e) {
+            $actual = $e->getMessage();
+        }
+
+        $this->assertEquals(
+            $expected,
+            $actual
+        );
+    }
+
+    public function testMessageWithMultiByteString()
+    {
+        $expected = 'Something not found: ч';
+        try {
+            throw new SomethingNotFoundException('ч');
+        } catch (SomethingNotFoundException $e) {
+            $actual = $e->getMessage();
+        }
+
+        $this->assertEquals(
+            $expected,
+            $actual
+        );
+    }
+
+    public function testMessageWithMultiBytesString()
+    {
+        $expected = 'Something not found: что-то';
+        try {
+            throw new SomethingNotFoundException('что-то');
+        } catch (SomethingNotFoundException $e) {
+            $actual = $e->getMessage();
+        }
+
+        $this->assertEquals(
+            $expected,
+            $actual
+        );
+    }
+
     public function testMessageByDefault()
     {
         $this->expectExceptionMessage('This is an exception');

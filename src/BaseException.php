@@ -10,11 +10,11 @@ abstract class BaseException extends \Exception
     {
         $message = $this->getMessage();
 
-        if (empty($message)) {
+        if (0 === mb_strlen($message)) {
             $message = $this->generateMessage($this->getClassName());
         }
 
-        if (!empty($value)) {
+        if (0 !== mb_strlen($value)) {
             $message = $this->generateMessageValue($message, $value);
         }
 
