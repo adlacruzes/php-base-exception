@@ -8,7 +8,16 @@ return PhpCsFixer\Config::create()
         '@Symfony' => true,
         'strict_param' => true,
         'array_syntax' => ['syntax' => 'short'],
-        'concat_space' => ['spacing' => 'one']
+        'concat_space' => ['spacing' => 'one'],
+        'trailing_comma_in_multiline_array' => true,
+        'phpdoc_separation' => false,
+        'method_chaining_indentation' => true,
+        'multiline_whitespace_before_semicolons' => true,
+        'phpdoc_align' => false,
+        'logical_operators' => true,
+        'modernize_types_casting' => true,
+        'random_api_migration' => true,
+        'list_syntax' => ['syntax' => 'short']
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
