@@ -21,6 +21,10 @@
         "adlacruzes/php-ci-tools": "dev-master",
         "phpunit/phpunit": "^8"
     },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "Adlacruzes\\Exceptions\\": "src/"
@@ -32,24 +36,22 @@
         }
     },
     "scripts": {
-        "composer-require-checker": "vendor/bin/ci-tools composer-require-checker",
-        "phpcs": "vendor/bin/ci-tools phpcs --report=source -s",
-        "phpcbf": "vendor/bin/ci-tools phpcbf",
-        "php-cs-fixer": "vendor/bin/ci-tools php-cs-fixer fix --dry-run --diff --verbose --diff-format=udiff --ansi",
-        "phpstan": "vendor/bin/ci-tools phpstan analyse src tests --no-progress --memory-limit=1024M --level=max --ansi",
-        "security-checker": "vendor/bin/ci-tools security-checker security:check",
-        "phpunit": "vendor/bin/phpunit",
         "ci": [
+            "@composer-normalize",
             "@composer-require-checker",
             "@phpcs",
             "@php-cs-fixer",
             "@phpstan",
             "@security-checker",
             "@phpunit"
-        ]
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
+        ],
+        "composer-normalize": "vendor/bin/ci-tools composer-normalize --dry-run",
+        "composer-require-checker": "vendor/bin/ci-tools composer-require-checker",
+        "php-cs-fixer": "vendor/bin/ci-tools php-cs-fixer fix --dry-run --diff --verbose --diff-format=udiff --ansi",
+        "phpcbf": "vendor/bin/ci-tools phpcbf",
+        "phpcs": "vendor/bin/ci-tools phpcs --report=source -s",
+        "phpstan": "vendor/bin/ci-tools phpstan analyse src tests --no-progress --memory-limit=1024M --level=max --ansi",
+        "phpunit": "vendor/bin/phpunit",
+        "security-checker": "vendor/bin/ci-tools security-checker security:check"
     }
 }
