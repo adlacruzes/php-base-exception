@@ -62,6 +62,22 @@ class BaseExceptionTest extends TestCase
         );
     }
 
+    public function testMessageWithNegativeNumberAsString()
+    {
+        $expected = 'Something not found: -42';
+
+        try {
+            throw new SomethingNotFoundException((string) -42);
+        } catch (SomethingNotFoundException $e) {
+            $actual = $e->getMessage();
+        }
+
+        $this->assertEquals(
+            $expected,
+            $actual
+        );
+    }
+
     public function testMessageWithMultiByteString()
     {
         $expected = 'Something not found: ч';
