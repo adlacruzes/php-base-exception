@@ -5,10 +5,14 @@ declare(strict_types=1);
 namespace Adlacruzes\Exceptions\Tests;
 
 use Adlacruzes\Exceptions\BaseException;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
 class BaseExceptionTest extends TestCase
 {
+    /**
+     * @throws Exception
+     */
     public function testEmptyMessage()
     {
         $this->expectExceptionMessage('Something not found');
@@ -16,6 +20,9 @@ class BaseExceptionTest extends TestCase
         throw new SomethingNotFoundException();
     }
 
+    /**
+     * @throws Exception
+     */
     public function testEmptyMessageWithConsecutiveCapitalLetters()
     {
         $this->expectExceptionMessage('Consecutive capital letters');
@@ -23,6 +30,9 @@ class BaseExceptionTest extends TestCase
         throw new ConsecutiveCAPITALLettersException();
     }
 
+    /**
+     * @throws Exception
+     */
     public function testEmptyMessageWithValue()
     {
         $this->expectExceptionMessage('Something not found: 404');
@@ -30,6 +40,9 @@ class BaseExceptionTest extends TestCase
         throw new SomethingNotFoundException('404');
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageWithEmptyString()
     {
         $expected = 'Something not found';
@@ -46,6 +59,9 @@ class BaseExceptionTest extends TestCase
         );
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageWithZeroAsString()
     {
         $expected = 'Something not found: 0';
@@ -62,6 +78,9 @@ class BaseExceptionTest extends TestCase
         );
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageWithNegativeNumberAsString()
     {
         $expected = 'Something not found: -42';
@@ -78,6 +97,9 @@ class BaseExceptionTest extends TestCase
         );
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageWithMultiByteString()
     {
         $expected = 'Something not found: ч';
@@ -93,6 +115,9 @@ class BaseExceptionTest extends TestCase
         );
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageWithMultiBytesString()
     {
         $expected = 'Something not found: что-то';
@@ -108,6 +133,9 @@ class BaseExceptionTest extends TestCase
         );
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageByDefault()
     {
         $this->expectExceptionMessage('This is an exception');
@@ -119,6 +147,9 @@ class BaseExceptionTest extends TestCase
         throw new $exception();
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageByDefaultWithValue()
     {
         $this->expectExceptionMessage('This is an exception: something');
@@ -130,6 +161,9 @@ class BaseExceptionTest extends TestCase
         throw new $exception('something');
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageByDefaultWithFinalDotAndValue()
     {
         $this->expectExceptionMessage('This is an exception: something');
@@ -141,6 +175,9 @@ class BaseExceptionTest extends TestCase
         throw new $exception('something');
     }
 
+    /**
+     * @throws Exception
+     */
     public function testMessageByDefaultWithFinalColonAndValue()
     {
         $this->expectExceptionMessage('This is an exception: something');
