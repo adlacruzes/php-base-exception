@@ -13,7 +13,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testEmptyMessage()
+    public function testEmptyMessage(): void
     {
         $this->expectExceptionMessage('Something not found');
 
@@ -23,7 +23,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testEmptyMessageWithConsecutiveCapitalLetters()
+    public function testEmptyMessageWithConsecutiveCapitalLetters(): void
     {
         $this->expectExceptionMessage('Consecutive capital letters');
 
@@ -33,7 +33,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testEmptyMessageWithValue()
+    public function testEmptyMessageWithValue(): void
     {
         $this->expectExceptionMessage('Something not found: 404');
 
@@ -43,7 +43,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageWithEmptyString()
+    public function testMessageWithEmptyString(): void
     {
         $expected = 'Something not found';
 
@@ -62,7 +62,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageWithZeroAsString()
+    public function testMessageWithZeroAsString(): void
     {
         $expected = 'Something not found: 0';
 
@@ -81,7 +81,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageWithNegativeNumberAsString()
+    public function testMessageWithNegativeNumberAsString(): void
     {
         $expected = 'Something not found: -42';
 
@@ -100,7 +100,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageWithMultiByteString()
+    public function testMessageWithMultiByteString(): void
     {
         $expected = 'Something not found: ч';
         try {
@@ -118,7 +118,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageWithMultiBytesString()
+    public function testMessageWithMultiBytesString(): void
     {
         $expected = 'Something not found: что-то';
         try {
@@ -136,7 +136,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageByDefault()
+    public function testMessageByDefault(): void
     {
         $this->expectExceptionMessage('This is an exception');
 
@@ -150,7 +150,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageByDefaultWithValue()
+    public function testMessageByDefaultWithValue(): void
     {
         $this->expectExceptionMessage('This is an exception: something');
 
@@ -164,7 +164,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageByDefaultWithFinalDotAndValue()
+    public function testMessageByDefaultWithFinalDotAndValue(): void
     {
         $this->expectExceptionMessage('This is an exception: something');
 
@@ -178,7 +178,7 @@ class BaseExceptionTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testMessageByDefaultWithFinalColonAndValue()
+    public function testMessageByDefaultWithFinalColonAndValue(): void
     {
         $this->expectExceptionMessage('This is an exception: something');
 
