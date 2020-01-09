@@ -55,7 +55,7 @@ abstract class BaseException extends \Exception
         return $generated;
     }
 
-    private function isLastCharacterAllowed(string $message)
+    private function isLastCharacterAllowed(string $message): bool
     {
         return !in_array(
             substr($message, -1),

@@ -141,6 +141,9 @@ class BaseExceptionTest extends TestCase
         $this->expectExceptionMessage('This is an exception');
 
         $exception = new class() extends BaseException {
+            /**
+             * @var string
+             */
             protected $message = 'This is an exception';
         };
 
@@ -155,6 +158,9 @@ class BaseExceptionTest extends TestCase
         $this->expectExceptionMessage('This is an exception: something');
 
         $exception = new class() extends BaseException {
+            /**
+             * @var string
+             */
             protected $message = 'This is an exception';
         };
 
@@ -169,6 +175,9 @@ class BaseExceptionTest extends TestCase
         $this->expectExceptionMessage('This is an exception: something');
 
         $exception = new class() extends BaseException {
+            /**
+             * @var string
+             */
             protected $message = 'This is an exception.';
         };
 
@@ -183,6 +192,9 @@ class BaseExceptionTest extends TestCase
         $this->expectExceptionMessage('This is an exception: something');
 
         $exception = new class() extends BaseException {
+            /**
+             * @var string
+             */
             protected $message = 'This is an exception:';
         };
 
