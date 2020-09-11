@@ -14,12 +14,12 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.2 || ^8.0",
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "adlacruzes/php-ci-tools": "1.1.0",
-        "phpunit/phpunit": "^8"
+        "adlacruzes/php-ci-tools": "^1",
+        "phpunit/phpunit": "^8 || ^9"
     },
     "config": {
         "optimize-autoloader": true,
