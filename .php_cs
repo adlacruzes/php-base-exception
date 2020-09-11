@@ -6,18 +6,24 @@ return PhpCsFixer\Config::create()
     ->setRules([
         '@PSR2' => true,
         '@Symfony' => true,
-        'strict_param' => true,
+        'array_indentation' => true,
         'array_syntax' => ['syntax' => 'short'],
+        'class_attributes_separation' => true,
         'concat_space' => ['spacing' => 'one'],
-        'trailing_comma_in_multiline_array' => true,
-        'phpdoc_separation' => false,
-        'method_chaining_indentation' => true,
-        'multiline_whitespace_before_semicolons' => true,
-        'phpdoc_align' => false,
+        'declare_strict_types' => true,
+        'fully_qualified_strict_types' => true,
         'logical_operators' => true,
+        'method_chaining_indentation' => true,
         'modernize_types_casting' => true,
+        'multiline_whitespace_before_semicolons' => true,
+        'no_superfluous_phpdoc_tags' => false,
+        'ordered_imports' => true,
+        'phpdoc_align' => false,
+        'phpdoc_separation' => false,
         'random_api_migration' => true,
-        'list_syntax' => ['syntax' => 'short']
+        'single_line_throw' => true,
+        'strict_param' => true,
+        'trailing_comma_in_multiline_array' => true,
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
