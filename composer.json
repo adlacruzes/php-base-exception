@@ -18,7 +18,10 @@
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "adlacruzes/php-ci-tools": "^1",
+        "enlightn/security-checker": "^1.7",
+        "ergebnis/composer-normalize": "^2.13.2",
+        "friendsofphp/php-cs-fixer": "^2.18.2",
+        "phpstan/phpstan": "^0.12.70",
         "phpunit/phpunit": "^8 || ^9"
     },
     "config": {
@@ -38,17 +41,15 @@
     "scripts": {
         "ci": [
             "@composer-normalize",
-            "@composer-require-checker",
             "@php-cs-fixer",
             "@phpstan",
             "@security-checker",
             "@phpunit"
         ],
-        "composer-normalize": "vendor/bin/ci-tools composer-normalize --dry-run",
-        "composer-require-checker": "vendor/bin/ci-tools composer-require-checker",
-        "php-cs-fixer": "vendor/bin/ci-tools php-cs-fixer fix --dry-run --diff --verbose --diff-format=udiff --show-progress=none --using-cache=yes --ansi",
-        "phpstan": "vendor/bin/ci-tools phpstan analyse --no-progress --ansi",
+        "composer-normalize": "@composer normalize --dry-run",
+        "php-cs-fixer": "vendor/bin/php-cs-fixer fix --dry-run --diff --verbose --diff-format=udiff --show-progress=none --using-cache=yes --ansi",
+        "phpstan": "vendor/bin/phpstan analyse --no-progress --ansi",
         "phpunit": "vendor/bin/phpunit",
-        "security-checker": "vendor/bin/ci-tools security-checker security:check"
+        "security-checker": "vendor/bin/security-checker security:check"
     }
 }
