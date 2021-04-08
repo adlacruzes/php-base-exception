@@ -20,9 +20,9 @@
     "require-dev": {
         "enlightn/security-checker": "^1.7",
         "ergebnis/composer-normalize": "^2.13.3",
-        "friendsofphp/php-cs-fixer": "^2.18.3",
-        "phpstan/phpstan": "^0.12.81",
-        "phpunit/phpunit": "^8 || ^9"
+        "friendsofphp/php-cs-fixer": "^2.18.5",
+        "phpstan/phpstan": "^0.12.83",
+        "phpunit/phpunit": "^8.5.15 || ^9"
     },
     "config": {
         "optimize-autoloader": true,
