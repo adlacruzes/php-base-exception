@@ -53,7 +53,7 @@ class BaseExceptionTest extends TestCase
             $actual = $e->getMessage();
         }
 
-        $this->assertEquals(
+        self::assertEquals(
             $expected,
             $actual
         );
@@ -72,7 +72,7 @@ class BaseExceptionTest extends TestCase
             $actual = $e->getMessage();
         }
 
-        $this->assertEquals(
+        self::assertEquals(
             $expected,
             $actual
         );
@@ -91,7 +91,7 @@ class BaseExceptionTest extends TestCase
             $actual = $e->getMessage();
         }
 
-        $this->assertEquals(
+        self::assertEquals(
             $expected,
             $actual
         );
@@ -109,7 +109,7 @@ class BaseExceptionTest extends TestCase
             $actual = $e->getMessage();
         }
 
-        $this->assertEquals(
+        self::assertEquals(
             $expected,
             $actual
         );
@@ -127,7 +127,7 @@ class BaseExceptionTest extends TestCase
             $actual = $e->getMessage();
         }
 
-        $this->assertEquals(
+        self::assertEquals(
             $expected,
             $actual
         );
