@@ -1,7 +1,7 @@
 # PHP Base exception
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg?style=flat-square)](https://php.net/)
-[![Packagist](https://img.shields.io/packagist/v/adlacruzes/php-base-exception?style=flat-square)](https://packagist.org/packages/adlacruzes/composer-import-scripts)
+[![Packagist](https://img.shields.io/packagist/v/adlacruzes/php-base-exception?style=flat-square)](https://packagist.org/packages/adlacruzes/php-base-exception)
 ![Github actions](https://github.com/adlacruzes/php-base-exception/workflows/Continuous%20Integration/badge.svg?branch=master)
 
 PHP base exception is a library that provides exceptions with a default message and a custom value in an easy way.
