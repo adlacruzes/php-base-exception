@@ -40,6 +40,7 @@
     },
     "scripts": {
         "ci": [
+            "@composer validate",
             "@composer-normalize",
             "@php-cs-fixer",
             "@phpstan",
@@ -50,8 +51,7 @@
             "vendor/bin/php-cs-fixer fix --diff --verbose --show-progress=none --using-cache=yes --ansi"
         ],
         "php-cs-fixer": "vendor/bin/php-cs-fixer fix --dry-run --diff --verbose --show-progress=none --using-cache=yes --ansi",
-        "phpstan": "vendor/bin/phpstan analyse --no-progress --ansi",
-        "phpunit": "vendor/bin/phpunit",
-        "security-checker": "vendor/bin/security-checker security:check"
+        "phpstan": "vendor/bin/phpstan analyse --memory-limit=256M --no-progress --ansi",
+        "phpunit": "vendor/bin/phpunit"
     }
 }
