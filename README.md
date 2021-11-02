@@ -51,7 +51,10 @@ You can choose a default message instead. Just initialize the message variable.
 
 ```php
 class SomethingNotFoundException extends BaseException {
-    
+
+    /**
+     * @var mixed
+     */
     protected $message = 'This is a default message';
     
 }

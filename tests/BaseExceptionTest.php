@@ -142,7 +142,7 @@ class BaseExceptionTest extends TestCase
 
         $exception = new class() extends BaseException {
             /**
-             * @var string
+             * @var mixed
              */
             protected $message = 'This is an exception';
         };
@@ -159,7 +159,7 @@ class BaseExceptionTest extends TestCase
 
         $exception = new class() extends BaseException {
             /**
-             * @var string
+             * @var mixed
              */
             protected $message = 'This is an exception';
         };
@@ -176,7 +176,7 @@ class BaseExceptionTest extends TestCase
 
         $exception = new class() extends BaseException {
             /**
-             * @var string
+             * @var mixed
              */
             protected $message = 'This is an exception.';
         };
@@ -193,7 +193,7 @@ class BaseExceptionTest extends TestCase
 
         $exception = new class() extends BaseException {
             /**
-             * @var string
+             * @var mixed
              */
             protected $message = 'This is an exception:';
         };
