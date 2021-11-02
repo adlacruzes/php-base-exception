@@ -19,10 +19,10 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.15.0",
-        "friendsofphp/php-cs-fixer": "^v3.0.2",
-        "phpstan/phpstan": "^0.12.94",
-        "phpstan/phpstan-strict-rules": "^0.12.10",
-        "phpunit/phpunit": "^8.5.15 || ^9.5.8"
+        "friendsofphp/php-cs-fixer": "^v3.2.1",
+        "phpstan/phpstan": "^1.0.1",
+        "phpstan/phpstan-strict-rules": "^1.0.0",
+        "phpunit/phpunit": "^8.5.21 || ^9.5.10"
     },
     "config": {
         "optimize-autoloader": true,
