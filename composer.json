@@ -1,13 +1,13 @@
 {
     "name": "adlacruzes/php-base-exception",
-    "type": "library",
     "description": "PHP base exception with default message and custom value",
+    "license": "MIT",
+    "type": "library",
     "keywords": [
         "exception",
         "custom",
         "message"
     ],
-    "license": "MIT",
     "authors": [
         {
             "name": "Andrés De la Cruz Escrig"
@@ -18,15 +18,11 @@
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.15.0",
+        "ergebnis/composer-normalize": "^2.17.0",
         "friendsofphp/php-cs-fixer": "^v3.2.1",
         "phpstan/phpstan": "^1.0.1",
         "phpstan/phpstan-strict-rules": "^1.0.0",
         "phpunit/phpunit": "^8.5.21 || ^9.5.10"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
@@ -37,6 +33,10 @@
         "psr-4": {
             "Adlacruzes\\Exceptions\\Tests\\": "tests/"
         }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
     "scripts": {
         "ci": [
