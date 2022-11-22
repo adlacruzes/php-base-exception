@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Adlacruzes\Exceptions\Tests;
 
 use Adlacruzes\Exceptions\BaseException;
-use Exception;
 use PHPUnit\Framework\TestCase;
 
 class BaseExceptionTest extends TestCase
 {
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testEmptyMessage(): void
     {
@@ -21,7 +20,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testEmptyMessageWithConsecutiveCapitalLetters(): void
     {
@@ -31,7 +30,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testEmptyMessageWithValue(): void
     {
@@ -41,7 +40,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageWithEmptyString(): void
     {
@@ -60,7 +59,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageWithZeroAsString(): void
     {
@@ -79,7 +78,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageWithNegativeNumberAsString(): void
     {
@@ -98,7 +97,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageWithMultiByteString(): void
     {
@@ -116,7 +115,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageWithMultiBytesString(): void
     {
@@ -134,7 +133,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageByDefault(): void
     {
@@ -151,7 +150,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageByDefaultWithValue(): void
     {
@@ -168,7 +167,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageByDefaultWithFinalDotAndValue(): void
     {
@@ -185,7 +184,7 @@ class BaseExceptionTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testMessageByDefaultWithFinalColonAndValue(): void
     {
